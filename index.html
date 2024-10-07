@@ -100,18 +100,19 @@
             color: #333; /* Cor da fonte */
         }
 
-        /* Estilo para a imagem circular */
+        /* Estilo para a imagem quadrada com bordas arredondadas */
         .centered-image {
             text-align: center; /* Centraliza o container da imagem */
             margin: 20px 0; /* Adiciona margem acima e abaixo */
         }
 
-        .circular-img {
+        .rounded-img {
             width: 200px; /* Define a largura da imagem */
             height: 200px; /* Define a altura da imagem */
-            border-radius: 50%; /* Cria a borda circular */
+            border-radius: 15px; /* Bordas arredondadas, mas não totalmente circulares */
             object-fit: cover; /* Faz com que a imagem se ajuste ao tamanho do container mantendo a proporção */
             border: 5px solid #333; /* Borda ao redor da imagem */
+            cursor: pointer; /* Torna a imagem clicável */
         }
     </style>
 </head>
@@ -142,16 +143,18 @@
     </div>
 
     <!-- Logo Adicionada -->
-    <img src="imagen1.png" alt="Logo BrasiLimp Service" class="logo-img"> <!-- Substitua 'sua-logo.png' pelo caminho da sua logo -->
+    <img src="imagen1" alt="Logo BrasiLimp Service" class="logo-img"> <!-- Substitua 'sua-logo.png' pelo caminho da sua logo -->
 
     <!-- Texto Adicionado Abaixo da Logo -->
     <div class="solution-text">
         LIMPEZA TERCEIRIZADA
     </div>
 
-    <!-- Imagem Quadrada com Borda Circular -->
+    <!-- Imagem Quadrada com Bordas Arredondadas e Redirecionamento para WhatsApp -->
     <div class="centered-image">
-        <img src="imagen2.png" alt="Imagem Circular" class="circular-img"> <!-- Substitua 'sua-imagem.png' pelo caminho da sua imagem -->
+        <a href="https://wa.me/5511999999999?text=Quero%20contratar%20o%20servi%C3%A7o%20de%20limpeza%20terceirizada" target="_blank">
+            <img src="imagen2.png" alt="Imagem com bordas arredondadas" class="rounded-img"> <!-- Substitua 'sua-imagem.png' pelo caminho da sua imagem -->
+        </a>
     </div>
 
     <script>
