@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrasiLimp Service</title>
+    <!-- Importando a fonte Poppins do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif; /* Usando a fonte Poppins */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #222; /* Cor do fundo do cabeçalho */
+        }
+
+        .logo h1 {
+            margin: 0;
+            color: white; /* Cor do texto BrasiLimp Service */
+        }
+
+        .menu-hamburguer {
+            font-size: 30px;
+            cursor: pointer;
+            color: white; /* Cor do ícone do menu hamburguer */
+        }
+
+        .nav-menu {
+            display: none; /* Oculta o menu por padrão */
+            position: absolute; /* Posiciona o menu abaixo do cabeçalho */
+            top: 60px; /* Ajusta a distância do topo */
+            left: 0;
+            width: 100%; /* Faz o menu ocupar toda a largura */
+            background-color: #f8f8f8; /* Cor de fundo do menu */
+            padding: 20px 0; /* Espaçamento interno */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para o menu */
+        }
+
+        .nav-menu.active {
+            display: block; /* Exibe o menu quando ativo */
+        }
+
+        .nav-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu ul li {
+            margin: 10px 0;
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .nav-menu ul li a {
+            text-decoration: none;
+            color: #333; /* Cor do texto do menu */
+            padding: 10px 20px; /* Adiciona um pouco de espaço ao redor do link */
+            display: block; /* Faz o link ocupar toda a largura do menu */
+        }
+
+        .nav-menu ul li a:hover {
+            background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+        }
+
+        /* Estilos para a seção inicial */
+        .hero {
+            height: 400px; /* Altura da seção */
+            background-color: transparent; /* Remove o fundo cinza */
+        }
+
+        /* Estilo para a frase */
+        .service-prompt {
+            text-align: center; /* Centraliza a frase */
+            margin: 10px 0; /* Ajuste a margem superior para 10px */
+            font-size: 28px; /* Tamanho da fonte da frase */
+            font-weight: 700; /* Define a fonte como negrito */
+            color: #333; /* Cor da fonte */
+        }
+
+        /* Estilo para a logo */
+        .logo-img {
+            display: block; /* Faz a imagem ser exibida como um bloco */
+            margin: 40px auto; /* Adiciona margem em cima e embaixo e centraliza a imagem */
+            max-width: 80%; /* Define uma largura máxima para a logo */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+        /* Estilo para o texto abaixo da imagem */
+        .solution-text {
+            text-align: center; /* Centraliza o texto */
+            margin: 20px 0; /* Margem superior de 20px para dar espaço */
+            font-size: 24px; /* Tamanho da fonte */
+            font-weight: 600; /* Define a fonte como semi-negrito */
+            color: #333; /* Cor da fonte */
+        }
+
+        /* Estilo para a imagem circular */
+        .centered-image {
+            text-align: center; /* Centraliza o container da imagem */
+            margin: 20px 0; /* Adiciona margem acima e abaixo */
+        }
+
+        .circular-img {
+            width: 200px; /* Define a largura da imagem */
+            height: 200px; /* Define a altura da imagem */
+            border-radius: 50%; /* Cria a borda circular */
+            object-fit: cover; /* Faz com que a imagem se ajuste ao tamanho do container mantendo a proporção */
+            border: 5px solid #333; /* Borda ao redor da imagem */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BrasiLimp Service</h1>
+        </div>
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            &#9776; <!-- Ícone do menu hamburguer -->
+        </div>
+    </header>
+    <nav id="nav-menu" class="nav-menu">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#servicos">Nossos serviços</a></li>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#contato">Fale conosco</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção Inicial Simples -->
+    <section class="hero"></section>
+
+    <!-- Frase Adicionada -->
+    <div class="service-prompt">
+        Venha conhecer nossos serviços
+    </div>
+
+    <!-- Logo Adicionada -->
+    <img src="imagem1.png" alt="Logo BrasiLimp Service" class="logo-img"> <!-- Substitua 'sua-logo.png' pelo caminho da sua logo -->
+
+    <!-- Texto Adicionado Abaixo da Logo -->
+    <div class="solution-text">
+        LIMPEZA TERCEIRIZADA
+    </div>
+
+    <!-- Imagem Quadrada com Borda Circular -->
+    <div class="centered-image">
+        <img src="imagem2.png" alt="Imagem Circular" class="circular-img"> <!-- Substitua 'sua-imagem.png' pelo caminho da sua imagem -->
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
